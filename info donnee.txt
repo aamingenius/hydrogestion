@@ -1,0 +1,3 @@
+https://www.w3schools.com/php/php_ajax_database.asp --> Connection php javascript
+https://www.anychart.com/blog/2020/08/04/mysql-database-php-js-chart/ --> Connection php javascript
+https://themeon.net/nifty/v2.9.1/icons-ionicons.html --> Icon ion
