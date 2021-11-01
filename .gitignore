@@ -1,71 +1,127 @@
-# System / Log files
-*.DS_Store
-*.log
+#-------------------------
+# Operating Specific Junk Files
+#-------------------------
 
-# Archives
-*.zip
+# OS X
+.DS_Store
+.AppleDouble
+.LSOverride
 
-# Sass Cache
-.sass-cache
+# OS X Thumbnails
+._*
 
-# Project files
-.idea
-nbproject
-nbproject/private
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# Linux
+*~
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+#-------------------------
+# Environment Files
+#-------------------------
+# These should never be under version control,
+# as it poses a security risk.
+.env
+.vagrant
+Vagrantfile
+
+#-------------------------
+# Temporary Files
+#-------------------------
+writable/cache/*
+!writable/cache/index.html
+
+writable/logs/*
+!writable/logs/index.html
+
+writable/session/*
+!writable/session/index.html
+
+writable/uploads/*
+!writable/uploads/index.html
+
+writable/debugbar/*
+
+php_errors.log
+
+#-------------------------
+# User Guide Temp Files
+#-------------------------
+user_guide_src/build/*
+user_guide_src/cilexer/build/*
+user_guide_src/cilexer/dist/*
+user_guide_src/cilexer/pycilexer.egg-info/*
+
+#-------------------------
+# Test Files
+#-------------------------
+tests/coverage*
+
+# Don't save phpunit under version control.
+phpunit
+
+#-------------------------
+# Composer
+#-------------------------
+vendor/
+
+#-------------------------
+# IDE / Development Files
+#-------------------------
+
+# Modules Testing
+_modules/*
+
+# phpenv local config
+.php-version
+
+# Jetbrains editors (PHPStorm, etc)
+.idea/
+*.iml
+
+# Netbeans
+nbproject/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+.nb-gradle/
+
+# Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+.phpintel
+/api/
+
+# Visual Studio Code
 .vscode/
-.vs/
 
-# Node / Bower
-node_modules/
-bower_components/
+/results/
+/phpunit*.xml
+/.phpunit.*.cache
 
-# Plugins
-/plugins/**/*.html
-/plugins/**/*.less
-/plugins/**/*.md
-/plugins/**/*.scss
-/plugins/**/*.ts
-/plugins/**/bower.json
-/plugins/**/package.json
-/plugins/**/webpack.config.js
-/plugins/**/demo/
-/plugins/**/demos/
-/plugins/**/dev/
-/plugins/**/example/
-/plugins/**/examples/
-/plugins/**/less/
-/plugins/**/test/
-/plugins/**/tests/
-/plugins/daterangepicker/website/
-/plugins/daterangepicker/drp.png
-/plugins/daterangepicker/moment.min.js
-/plugins/daterangepicker/package.js
-/plugins/daterangepicker/website.css
-/plugins/daterangepicker/website.js
-/plugins/jquery-ui/AUTHORS.txt
-/plugins/jquery-ui/external/jquery/jquery.js
-/plugins/inputmask/bindings/
-/plugins/flot/plugins/jquery*.js
-!/plugins/flot/plugins/jquery.flot.*.js
-!/plugins/**/LICENSE.md
-!/plugins/**/LICENSE.txt
-!/plugins/**/license.md
-!/plugins/**/license.txt
-!/plugins/**/LICENSE
-!/plugins/**/license
-!/plugins/**/COPYING
-
-
-# Docs
-/docs/_site/
-/docs/vendor/
-/docs/.bundle/
-/docs_html/
-.jekyll-cache/
-.jekyll-metadata
-
-# ETC
-TODO
-test.html
-ad.js
-/.cache/
