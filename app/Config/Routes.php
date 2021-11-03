@@ -17,7 +17,7 @@ if (file_exists(SYSTEMPATH . 'Config/Routes.php')) {
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Dashboard');
+$routes->setDefaultController('SignupController');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
@@ -31,10 +31,23 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Dashboard::index');
+// custom routes
+
+$routes->get('/', 'SignupController::index');
+$routes->get('/signup', 'SignupController::index');
+$routes->get('/signin', 'SigninController::index');
+$routes->get('/profile', 'ProfileController::index',['filter' => 'authGuard']);
+
+
+$routes->get('dashboard/', 'Dashboard::index');
 $routes->get('news/(:segment)', 'News::view/$1');
 $routes->get('news', 'News::index');
+$routes->get('users/', 'Users::index');
+$routes->get('users/login', 'Users::login');
 $routes->get('(:any)', 'Pages::view/$1');
+
+
+
 
 /*
  * --------------------------------------------------------------------
