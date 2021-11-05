@@ -36,15 +36,15 @@ class SigninController extends Controller
                 ];
 
                 $session->set($ses_data);
-                return redirect()->to('/profile');
+                return redirect()->to('/dashboard');
             
             }else{
-                $session->setFlashdata('msg', 'Password is incorrect.');
+                $session->setFlashdata('msg', 'informations incorrect.');
                 return redirect()->to('/signin');
             }
 
         }else{
-            $session->setFlashdata('msg', 'Email does not exist.');
+            $session->setFlashdata('msg', 'Email innexistant.');
             return redirect()->to('/signin');
         }
     }

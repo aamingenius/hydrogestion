@@ -77,7 +77,29 @@
           </form>
         </div>
       </li>
+      <!-- Mise ajour -->
+      <li class="nav-item">
+        <div class="mt-2">
+      <?php if (session()->has('message')){ ?>
+        <div class="alert <?=session()->getFlashdata('alert-class') ?>">
+          <?=session()->getFlashdata('message') ?>
+        </div>
+      <?php } ?>
 
+      <?php $validation = \Config\Services::validation(); ?>
+    </div>  
+
+      <form action="<?=site_url('import-csv') ?>" method="post" enctype="multipart/form-data">
+        <div class="form-group mb-3">
+          <div class="mb-3">
+            <input type="file" name="file" class="form-control" id="file">
+          </div>             
+        </div>
+        <div class="d-grid">
+          <input type="submit" name="submit" value="Upload" class="btn btn-dark" />
+        </div>
+      </form>
+      </li>
       <!-- Messages Dropdown Menu -->
       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
@@ -270,7 +292,7 @@
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Acceuil</a></li>
-              <li class="breadcrumb-item active">Tableau de bord 1</li>
+              <li class="breadcrumb-item active">Tableau de bord </li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->

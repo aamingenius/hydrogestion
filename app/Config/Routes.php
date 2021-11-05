@@ -47,6 +47,10 @@ $routes->get('users/login', 'Users::login');
 $routes->get('(:any)', 'Pages::view/$1');
 
 
+$routes->get('/student', 'StudentController::index');
+
+$routes->post('import-csv', 'StudentController::importCsvToDb');
+
 
 
 /*
