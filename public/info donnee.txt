@@ -1,4 +1,7 @@
 https://www.w3schools.com/php/php_ajax_database.asp --> Connection php javascript
 https://www.anychart.com/blog/2020/08/04/mysql-database-php-js-chart/ --> Connection php javascript
 https://themeon.net/nifty/v2.9.1/icons-ionicons.html --> Icon ion
-https://mfikri.com/en/blog/codeigniter4-tutorial-beginners --> codeigniter tuto
+https://codeigniter4.github.io/userguide/tutorial/news_section.html --> TUTO CODEIGN
+https://www.positronx.io/codeigniter-authentication-login-and-registration-tutorial/
+https://www.positronx.io/codeigniter/
+https://onlinewebtutorblog.com/import-csv-file-data-into-mysql-database-codeigniter-4/
