@@ -33,6 +33,9 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 // custom routes
 
+$routes->get('/student', 'Student::index');
+//...
+$routes->match(["get", "post"], "upload-student", "Student::uploadStudent");
 $routes->get('/', 'SignupController::index');
 $routes->get('/signup', 'SignupController::index');
 $routes->get('/signin', 'SigninController::index');
@@ -46,8 +49,6 @@ $routes->get('users/', 'Users::index');
 $routes->get('users/login', 'Users::login');
 $routes->get('(:any)', 'Pages::view/$1');
 
-
-$routes->get('/student', 'StudentController::index');
 
 $routes->post('import-csv', 'StudentController::importCsvToDb');
 
