@@ -23,10 +23,12 @@ class Student extends BaseController
 
             $student = array();
             $itemArray = "";
+            
 
             $csv_data = array_map('str_getcsv', file($file_name));
-
-            /*echo '<pre>' . var_export($csv_data[1], true) . '</pre>';
+            // $StudentitemArray[]  = 
+            echo '<pre> array student' . var_export($StudentitemArray, true) . '</pre>';
+            /*
             echo '</br>';
             $itemArray= implode(" ",$csv_data[1]);
             echo "itemArray = ".$itemArray;
@@ -43,13 +45,14 @@ class Student extends BaseController
  
                     if ($index > 0) {
 
-                        /*$student[] = array(
+                        $student[] = array(
                             "name" => $data[0],
                             "email" => $data[0],
                             "mobile" => $data[0],
                             "designation" => $data[0],
-                        );*/
+                        );
                         echo '<pre>' . var_export($data[0], true) . '</pre>';
+                        $itemArray= implode(" ",$data[0]);
                     } 
                     $index++;
                 }
