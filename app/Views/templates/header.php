@@ -29,6 +29,11 @@
   <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
   <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
   <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+
+  <!-- SweetAlert2 -->
+  <link rel="stylesheet" href="plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+  <!-- Toastr -->
+  <link rel="stylesheet" href="plugins/toastr/toastr.min.css">
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -53,9 +58,9 @@
         <a href="#" class="nav-link">Contact</a>
       </li>
     </ul>
-
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
+    
       <!-- Navbar Search -->
       <li class="nav-item">
         <a class="nav-link" data-widget="navbar-search" href="#" role="button">
@@ -77,29 +82,16 @@
           </form>
         </div>
       </li>
+
       <!-- Mise ajour -->
       <li class="nav-item">
-        <div class="mt-2">
-      <?php if (session()->has('message')){ ?>
-        <div class="alert <?=session()->getFlashdata('alert-class') ?>">
-          <?=session()->getFlashdata('message') ?>
-        </div>
-      <?php } ?>
-
-      <?php $validation = \Config\Services::validation(); ?>
-    </div>  
-
-      <form action="<?=site_url('import-csv') ?>" method="post" enctype="multipart/form-data">
-        <div class="form-group mb-3">
-          <div class="mb-3">
-            <input type="file" name="file" class="form-control" id="file">
-          </div>             
-        </div>
-        <div class="d-grid">
-          <input type="submit" name="submit" value="Upload" class="btn btn-dark" />
-        </div>
-      </form>
+         <a class="nav-link"  href="#" role="button"data-toggle="modal" data-target="#modal-success">
+          <i class="fas fa-cloud-download-alt"></i>
+        </a>
+        
+ 
       </li>
+
       <!-- Messages Dropdown Menu -->
       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">

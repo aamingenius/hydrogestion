@@ -21,7 +21,46 @@
   <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
+<div class="modal fade" id="modal-success">
+        <div class="modal-dialog">
+          <div class="modal-content bg-success">
+            <div class="modal-header">
+              <h4 class="modal-title">Mise A jour Base de données</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
 
+
+             <div class="mt-2">
+              <?php if (session()->has('message')){ ?>
+                <div class="alert <?=session()->getFlashdata('alert-class') ?>">
+                  <?=session()->getFlashdata('message') ?>
+                </div>
+              <?php } ?>
+
+              <?php $validation = \Config\Services::validation(); ?>
+            </div>  
+
+              <form action="<?=site_url('import-csv') ?>" method="post" enctype="multipart/form-data">
+                <div class="form-group mb-3">
+                  <div class="mb-3">
+                    <input type="file" name="file" class="form-control" id="file">
+                  </div>             
+                </div>
+             </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-outline-light" data-dismiss="modal">Fermer</button>
+               <input type="submit" name="submit" value="Appliquer" class="btn btn-dark" />
+               
+              </form>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
