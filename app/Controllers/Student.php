@@ -22,19 +22,20 @@ class Student extends BaseController
             $file_name = $file->getTempName();
 
             $student = array();
-            $itemArray = "";
+            //$itemArray = "";
             
 
             $csv_data = array_map('str_getcsv', file($file_name));
+            echo '<pre>'. var_export($csv_data, true) . '</pre>';
             // $StudentitemArray[]  = 
-            echo '<pre> array student' . var_export($StudentitemArray, true) . '</pre>';
+            //echo '<pre> array student' . var_export($StudentitemArray, true) . '</pre>';
             /*
             echo '</br>';
             $itemArray= implode(" ",$csv_data[1]);
             echo "itemArray = ".$itemArray;
             $studentItem=explode(";", $itemArray);
             echo '<pre>' . var_export($studentItem, true) . '</pre>';*/
-
+          
             if (count($csv_data) > 0) {
 
 
@@ -45,18 +46,30 @@ class Student extends BaseController
  
                     if ($index > 0) {
 
-                        $student[] = array(
+                        $student[0] = array(
                             "name" => $data[0],
                             "email" => $data[0],
                             "mobile" => $data[0],
                             "designation" => $data[0],
-                        );
-                        echo '<pre>' . var_export($data[0], true) . '</pre>';
-                        $itemArray= implode(" ",$data[0]);
+                             ); 
+                        
                     } 
                     $index++;
+                      
                 }
+              /*  $index=0;
+                foreach ($student as $datastudent){
+                    $itemArray[$index] =  $student[$index]['name'];
+                    $index++;
+                }
+ */
+                 //echo '<pre>'. var_export($itemArray, true) . '</pre>';
+
+               
                 
+                
+                     
+                // $studentItem=explode(";", $itemArray);
 
                 // $builder = $this->db->table('tbl_students');
 
