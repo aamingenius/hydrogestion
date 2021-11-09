@@ -240,6 +240,12 @@
               <li class="nav-item">
                 <a href="./index.html" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
+                  <p>Etat Global</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./index.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
                   <p>Moroni</p>
                 </a>
               </li>
@@ -261,6 +267,13 @@
                   <p>Aeroport</p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="./index.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>HydroGaz</p>
+                </a>
+              </li>
+              
             </ul>
           </li>
           

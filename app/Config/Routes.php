@@ -33,8 +33,13 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 // custom routes
 
-$routes->get('/student', 'Student::index');
+//$routes->get('/student', 'Student::index');
 //...
+$routes->get('/', 'Jaugeages::index');
+$routes->post('jaugeages/importFile', 'Jaugeages::importFile');
+
+
+
 $routes->match(["get", "post"], "upload-student", "Student::uploadStudent");
 $routes->get('/', 'SignupController::index');
 $routes->get('/signup', 'SignupController::index');

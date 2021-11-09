@@ -1,27 +1,19 @@
-<?php
-
+<?php 
 namespace App\Controllers;
-use App\Models\Users;
-class Dashboard extends BaseController
-{
-    public function index()
-    {
 
-    	## Fetch all records
-      	$users = new Users();
-      	$data['users'] = $users->findAll();
+use App\Models\Jaugeage;
 
+class Jaugeages extends BaseController{
 
-        echo view('templates/header');
+	public function index(){
+		## Fetch all records
+      	$jaugeage = new Jaugeage();
+      	$data['jaugeage'] = $jaugeage->findAll();
 
-            echo view('dashboard/item',$data);
-             echo view('dashboard/table',$data);
-            echo view('dashboard/graphe',$data);
-            echo view('dashboard/dashboard',$data);
-        echo view('templates/footer');
-    }
+      	return view('jaugeage/index',$data);
+	}
 
-    // File upload and Insert records
+	 // File upload and Insert records
 	public function importFile(){
 
      	// Validation
@@ -118,4 +110,6 @@ class Dashboard extends BaseController
   
      	return redirect()->route('/'); 
    	}
+
+	  
 }
