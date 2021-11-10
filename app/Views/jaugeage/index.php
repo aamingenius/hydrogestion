@@ -58,7 +58,8 @@
                           <th>DATE/HEURE</th>
                           <th>PRODUIT</th>
                           <th>DEBUT COMPTEUR </th>
-                          <th>DISTRIBUER</th>
+                          <th>SORTI</th>
+                          <th>ENTRE</th>
                           <th>ETAT ACTUEL COMPTEUR </th>
 						</tr>
 					</thead>
@@ -72,7 +73,8 @@
 									<td><?= $jaugeage['date'] ?></td>
 									<td><?= $jaugeage['produit'] ?></td>
 									<td><?= $jaugeage['debut_compteur'] ?></td>
-									<td><?= $jaugeage['distribuer'] ?></td>
+									<td><?= $jaugeage['sorti'] ?></td>
+									<td><?= $jaugeage['entre'] ?></td>
 									<td><?= $jaugeage['fin_compteur'] ?></td>
 								</tr>  
 								<?php

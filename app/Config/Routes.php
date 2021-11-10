@@ -35,15 +35,15 @@ $routes->setAutoRoute(true);
 
 //$routes->get('/student', 'Student::index');
 //...
-$routes->get('/', 'Jaugeages::index');
+$routes->get('/jaugeage', 'Jaugeages::index');
 $routes->post('jaugeages/importFile', 'Jaugeages::importFile');
 
 
 
 $routes->match(["get", "post"], "upload-student", "Student::uploadStudent");
-$routes->get('/', 'SignupController::index');
+$routes->get('/', 'SigninController::index');
 $routes->get('/signup', 'SignupController::index');
-$routes->get('/signin', 'SigninController::index');
+//$routes->get('/signin', 'SigninController::index');
 $routes->get('/profile', 'ProfileController::index',['filter' => 'authGuard']);
 
 

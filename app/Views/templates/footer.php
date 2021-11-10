@@ -33,21 +33,32 @@
             <div class="modal-body">
 
 
-             <div class="mt-2">
-              <?php if (session()->has('message')){ ?>
-                <div class="alert <?=session()->getFlashdata('alert-class') ?>">
-                  <?=session()->getFlashdata('message') ?>
-                </div>
-              <?php } ?>
+              <?php 
+            // Display Response
+            if(session()->has('message')){
+            ?>
+            <div class="alert <?= session()->getFlashdata('alert-class') ?>">
+                <?= session()->getFlashdata('message') ?>
+            </div>
+            <?php
+            }
+            ?>
+         
+            <?php $validation = \Config\Services::validation(); ?>
 
-              <?php $validation = \Config\Services::validation(); ?>
-            </div>  
+              <form action="<?=site_url('jaugeages/importFile')?>" method="post" enctype="multipart/form-data">
+                <?= csrf_field(); ?>
+                <div class="form-group">
+                    <label for="file">File:</label>
 
-              <form action="<?=site_url('import-csv') ?>" method="post" enctype="multipart/form-data">
-                <div class="form-group mb-3">
-                  <div class="mb-3">
-                    <input type="file" name="file" class="form-control" id="file">
-                  </div>             
+                    <input type="file" class="form-control" id="file" name="file" />
+                    <!-- Error -->
+                    <?php if( $validation->getError('file') ) {?>
+                    <div class='alert alert-danger mt-2'>
+                        <?= $validation->getError('file'); ?>
+                    </div>
+                    <?php }?>
+
                 </div>
              </div>
             <div class="modal-footer justify-content-between">
@@ -123,6 +134,35 @@
       "autoWidth": false,
       "responsive": true,
     });
+ 
+  $('.swalDefaultSuccess').click(function() {
+      Toast.fire({
+        icon: 'success',
+        title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+      })
+    });
+   $('.swalDefaultSuccess').click(function() {
+      Toast.fire({
+        icon: 'success',
+        title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+      })
+    });
+   });
+   $(function() {
+    var Toast = Swal.mixin({
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 3000
+    });
+
+    $('.swalDefaultSuccess').click(function() {
+      Toast.fire({
+        icon: 'success',
+        title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+      })
+    });
+ 
   });
 </script>
 </body>

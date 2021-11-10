@@ -10,7 +10,17 @@ class Jaugeages extends BaseController{
       	$jaugeage = new Jaugeage();
       	$data['jaugeage'] = $jaugeage->findAll();
 
-      	return view('jaugeage/index',$data);
+      	//return view('jaugeage/index',$data);
+
+
+        echo view('templates/header');
+
+            echo view('dashboard/item',$data);
+             echo view('jaugeage/table',$data);
+            echo view('dashboard/graphe',$data);
+            echo view('dashboard/dashboard',$data);
+            
+        echo view('templates/footer');
 	}
 
 	 // File upload and Insert records
@@ -39,7 +49,7 @@ class Jaugeages extends BaseController{
                		// Reading file
                		$file = fopen("csvfile/".$newName,"r");
                		$i = 0;
-               		$numberOfFields = 6; // Total number of fields
+               		$numberOfFields = 7; // Total number of fields
 
                		$importData_arr = array();
                   $itemArray = array();
@@ -59,8 +69,9 @@ class Jaugeages extends BaseController{
                          $itemArray[$i]['date'] = $item[1];
                          $itemArray[$i]['produit'] = $item[2];
                          $itemArray[$i]['debut_compteur'] = $item[3];
-                         $itemArray[$i]['distribuer'] = $item[4];
-                         $itemArray[$i]['fin_compteur'] = $item[5];
+                         $itemArray[$i]['sorti'] = $item[4];
+                         $itemArray[$i]['entre'] = $item[5];
+                         $itemArray[$i]['fin_compteur'] = $item[6];
                           
                            
                    		}
@@ -89,11 +100,11 @@ class Jaugeages extends BaseController{
 	                        }
 	                    }
 	                    
-	                }
+	                } 
                 
                		// Set Session
                		session()->setFlashdata('message', $count.' Record inserted successfully!');
-               		session()->setFlashdata('alert-class', 'alert-success');
+               		session()->setFlashdata('alert-class', 'btn btn-success swalDefaultSuccess');
 
             	}else{
 	               // Set Session
@@ -108,7 +119,7 @@ class Jaugeages extends BaseController{
 
      	}
   
-     	return redirect()->route('/'); 
+     	return redirect()->route('jaugeage'); 
    	}
 
 	  

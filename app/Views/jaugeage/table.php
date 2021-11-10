@@ -14,6 +14,7 @@
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
+                     
                       <table id="example1" class="table table-bordered table-striped">
                         <thead>
                         <tr>
@@ -27,24 +28,29 @@
                          </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                          <td>Trident</td>
-                          <td>Internet Explorer 4.0 </td>
-                          <td>Win 95+</td>
-                          <td>Win 95+</td>
-                          <td> 4</td>
-                          <td> 4</td>
-                          <td>X</td> 
-                        </tr>
-                        <tr>
-                          <td>Presto</td>
-                          <td>Nokia N800</td>
-                          <td>N800</td>
-                          <td>N800</td>
-                          <td>-</td>
-                          <td>-</td>
-                          <td>A</td> 
-                        </tr>
+                          <?php 
+            if(isset($jaugeage) && count($jaugeage) > 0){
+              foreach($jaugeage as $jaugeage){
+                ?>
+                <tr>
+                  <td><?= $jaugeage['cuve'] ?></td>
+                  <td><?= $jaugeage['date'] ?></td>
+                  <td><?= $jaugeage['produit'] ?></td>
+                  <td><?= $jaugeage['debut_compteur'] ?></td>
+                  <td><?= $jaugeage['sorti'] ?></td>
+                  <td><?= $jaugeage['entre'] ?></td>
+                  <td><?= $jaugeage['fin_compteur'] ?></td>
+                </tr>  
+             <?php
+                    }
+                  }else{
+                    ?>
+                    <tr>
+                      <td colspan="7">Aucune données trouver.</td>
+                    </tr>
+                    <?php
+                  }
+             ?>
                         </tbody>
                         <tfoot>
                         <tr>

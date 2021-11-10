@@ -60,7 +60,21 @@
     </ul>
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
-    
+
+    <?php 
+            // Display Response
+            if(session()->has('message')){
+            ?>
+
+            <div class="alert <?= session()->getFlashdata('alert-class') ?>">
+                <?= session()->getFlashdata('message') ?>
+            </div>
+            <?php
+            }
+            ?>
+         
+            <?php $validation = \Config\Services::validation(); ?>
+             
       <!-- Navbar Search -->
       <li class="nav-item">
         <a class="nav-link" data-widget="navbar-search" href="#" role="button">
@@ -238,37 +252,37 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./index.html" class="nav-link active">
+                <a href="<?=site_url('jaugeage')?>" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Etat Global</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index.html" class="nav-link">
+                <a href="#" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Moroni</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./anjouan.html" class="nav-link">
+                <a href="#" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Anjouan</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./moheli.html" class="nav-link">
+                <a href="#" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Moheli</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./aeroport.html" class="nav-link">
+                <a href="#" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Aeroport</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index.html" class="nav-link">
+                <a href="#" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>HydroGaz</p>
                 </a>
