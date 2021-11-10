@@ -61,19 +61,7 @@
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
 
-    <?php 
-            // Display Response
-            if(session()->has('message')){
-            ?>
-
-            <div class="alert <?= session()->getFlashdata('alert-class') ?>">
-                <?= session()->getFlashdata('message') ?>
-            </div>
-            <?php
-            }
-            ?>
-         
-            <?php $validation = \Config\Services::validation(); ?>
+     
              
       <!-- Navbar Search -->
       <li class="nav-item">

@@ -49,7 +49,7 @@
               <form action="<?=site_url('jaugeages/importFile')?>" method="post" enctype="multipart/form-data">
                 <?= csrf_field(); ?>
                 <div class="form-group">
-                    <label for="file">File:</label>
+                    <label for="file">Fichier</label>
 
                     <input type="file" class="form-control" id="file" name="file" />
                     <!-- Error -->
@@ -119,7 +119,32 @@
 <script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
 <script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
 <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+ <!-- SweetAlert2 -->
+<script src="plugins/sweetalert2/sweetalert2.min.js"></script>
+  
+
 <script>
+<?php 
+$op=1;
+if (session()->getFlashdata('alert-class') == "alert-success") { ?>
+    $(function() {
+    var Toast = Swal.mixin({
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 5000
+    });
+
+    $('.swalDefaultSuccess').ready(function() {
+      Toast.fire({
+        icon: 'success',
+        title: '<?php echo session()->getFlashdata('message') ?>'
+      })
+    });
+   
+ 
+  });
+  <?php } ?>
   $(function () {
     $("#example1").DataTable({
       "responsive": true, "lengthChange": false, "autoWidth": false,
@@ -134,36 +159,9 @@
       "autoWidth": false,
       "responsive": true,
     });
- 
-  $('.swalDefaultSuccess').click(function() {
-      Toast.fire({
-        icon: 'success',
-        title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
-      })
-    });
-   $('.swalDefaultSuccess').click(function() {
-      Toast.fire({
-        icon: 'success',
-        title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
-      })
-    });
+  
    });
-   $(function() {
-    var Toast = Swal.mixin({
-      toast: true,
-      position: 'top-end',
-      showConfirmButton: false,
-      timer: 3000
-    });
-
-    $('.swalDefaultSuccess').click(function() {
-      Toast.fire({
-        icon: 'success',
-        title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
-      })
-    });
- 
-  });
+  
 </script>
 </body>
 </html>

@@ -36,10 +36,10 @@
                   <td><?= $jaugeage['cuve'] ?></td>
                   <td><?= $jaugeage['date'] ?></td>
                   <td><?= $jaugeage['produit'] ?></td>
-                  <td><?= $jaugeage['debut_compteur'] ?></td>
-                  <td><?= $jaugeage['sorti'] ?></td>
-                  <td><?= $jaugeage['entre'] ?></td>
-                  <td><?= $jaugeage['fin_compteur'] ?></td>
+                  <td><?= $jaugeage['debut_compteur'].' L' ?></td>
+                  <td><?= $jaugeage['sorti'].' L' ?></td>
+                  <td><?= $jaugeage['entre'].' L' ?></td>
+                  <td><?= $jaugeage['fin_compteur'].' L' ?></td>
                 </tr>  
              <?php
                     }

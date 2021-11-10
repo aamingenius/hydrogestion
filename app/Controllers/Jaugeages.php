@@ -104,7 +104,7 @@ class Jaugeages extends BaseController{
                 
                		// Set Session
                		session()->setFlashdata('message', $count.' Record inserted successfully!');
-               		session()->setFlashdata('alert-class', 'btn btn-success swalDefaultSuccess');
+               		session()->setFlashdata('alert-class', 'alert-success');
 
             	}else{
 	               // Set Session
