@@ -1,13 +1,13 @@
 <?php 
 namespace App\Controllers;
 
-use App\Models\Jaugeage;
+use App\Models\JaugeageModel;
 
 class Jaugeages extends BaseController{
 
 	public function index(){
 		## Fetch all records
-      	$jaugeage = new Jaugeage();
+      	$jaugeage = new JaugeageModel();
       	$data['jaugeage'] = $jaugeage->findAll();
 
       	//return view('jaugeage/index',$data);
@@ -49,7 +49,7 @@ class Jaugeages extends BaseController{
                		// Reading file
                		$file = fopen("csvfile/".$newName,"r");
                		$i = 0;
-               		$numberOfFields = 7; // Total number of fields
+               		$numberOfFields = 8; // Total number of fields
 
                		$importData_arr = array();
                   $itemArray = array();
@@ -72,6 +72,7 @@ class Jaugeages extends BaseController{
                          $itemArray[$i]['sorti'] = $item[4];
                          $itemArray[$i]['entre'] = $item[5];
                          $itemArray[$i]['fin_compteur'] = $item[6];
+                         $itemArray[$i]['code'] = $item[7];
                           
                            
                    		}
@@ -81,25 +82,25 @@ class Jaugeages extends BaseController{
                 	}
 
                 	fclose($file); 
-                  echo '<pre>' . var_export($itemArray, true) . '</pre>';
                   
+                    echo '<pre>' . var_export($itemArray, true) . '</pre>';
 
 	                // Insert data
 	                $count = 0;
 	                foreach($itemArray as $jaugeagedata){
-	                    $jaugeage = new Jaugeage();
+	                    $jaugeage = new JaugeageModel();
 
-	                    // Check record
-	                    $checkrecord = $jaugeage->where('cuve',$jaugeagedata['cuve'])->countAllResults();
+	                     // Check record
+	                    $checkrecord = $jaugeage->where('code',$jaugeagedata['code'])->countAllResults();
 
-	                    if($checkrecord == 0){
+	                     if($checkrecord == 0){
 
 	                        ## Insert Record
 	                        if($jaugeage->insert($jaugeagedata)){
 	                           $count++;
 	                        }
-	                    }
-	                    
+	                     }
+	                  
 	                } 
                 
                		// Set Session
@@ -119,7 +120,7 @@ class Jaugeages extends BaseController{
 
      	}
   
-     	return redirect()->route('jaugeage'); 
+      return redirect()->route('jaugeage'); 
    	}
 
 	  

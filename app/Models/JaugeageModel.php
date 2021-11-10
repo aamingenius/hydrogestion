@@ -3,13 +3,13 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Jaugeage extends Model
+class JaugeageModel extends Model
 {
     protected $table = 'jaugeage'; 
     protected $primaryKey = 'id';
 
     protected $returnType = 'array';
-protected $allowedFields = ['cuve', 'date','produit','debut_compteur','sorti','entre','fin_compteur'];
+protected $allowedFields = ['cuve', 'date','produit','debut_compteur','sorti','entre','fin_compteur','code'];
     protected $useTimestamps = false;
 
     protected $validationRules = [];
