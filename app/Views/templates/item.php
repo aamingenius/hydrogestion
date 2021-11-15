@@ -41,7 +41,7 @@
                   }
              ?>
                  
-                <h3><?php  echo $compteur_essence; ?><sup style="font-size: 20px">L</sup></h3>
+                <h3><?php  echo $compteur_essence; ?><sup style="font-size: 20px"> Litres </sup></h3>
 
                 <h2>Essence</h2>
                 <!-- <p>New Orders</p> -->
@@ -49,68 +49,68 @@
               <div class="icon">
                 <i class="ion ion-waterdrop"> </i> 
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="#" class="small-box-footer">Plus info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
-          <div class="col-lg-2 col-6">
+          <div class="col-lg-3 col-6">
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3><?php  echo $compteur_gasoil; ?><sup style="font-size: 20px">L</sup></h3>
+                <h3><?php  echo $compteur_gasoil; ?><sup style="font-size: 20px"> Litres </sup></h3>
 
                 <h2>Gasoil</h2>
               </div>
               <div class="icon">
                 <i class="ion ion-waterdrop"></i>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="#" class="small-box-footer">Plus info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
-          <div class="col-lg-2 col-6">
+          <div class="col-lg-3 col-6">
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3><?php  echo $compteur_petrole; ?><sup style="font-size: 20px"> Litre</sup></h3>
+                <h3><?php  echo $compteur_petrole; ?><sup style="font-size: 20px"> Litres </sup></h3>
 
                 <h2>Petrole</h2>
               </div>
               <div class="icon">
                 <i class="ion ion-waterdrop"></i>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="#" class="small-box-footer">Plus info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
-          <div class="col-lg-2 col-6">
+          <div class="col-lg-3 col-6">
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3><?php  echo $compteur_jeta1; ?><sup style="font-size: 20px">L</sup></h3>
+                <h3><?php  echo $compteur_jeta1; ?><sup style="font-size: 20px"> Litres </sup></h3>
 
                 <h2>Jet A1</h2>
               </div>
               <div class="icon">
                 <i class="ion ion-plane"></i>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="#" class="small-box-footer">Plus info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
+          <!-- <div class="col-lg-3 col-6">
+           
             <div class="small-box bg-orange">
               <div class="inner">
-                <h3>43<sup style="font-size: 20px">Bouteils</sup></h3>
+                <h3>43<sup style="font-size: 20px"> Bouteils </sup></h3>
 
                 <h2>Hydrogaz</h2>
               </div>
               <div class="icon">
                 <i class="ion ion-flame"></i>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="#" class="small-box-footer"> Plus info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
-          </div>
+          </div> -->
         </div>
         <!-- /.row -->

@@ -36,7 +36,7 @@ class SigninController extends Controller
                 ];
 
                 $session->set($ses_data);
-                return redirect()->to('/dashboard');
+                return redirect()->to('/jaugeage');
             
             }else{
                 $session->setFlashdata('msg', 'informations incorrect.');
