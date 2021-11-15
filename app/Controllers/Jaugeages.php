@@ -13,7 +13,7 @@ class Jaugeages extends BaseController{
       			'item' => 'globale'
       			];
       	 
-
+   // echo '<pre>' . var_export($session->name, true) . '</pre>';
         echo view('templates/header',$page);
             echo view('templates/item',$data);
             echo view('jaugeage/table',$data);
@@ -34,7 +34,7 @@ class Jaugeages extends BaseController{
      	if (!$input) { // Not valid
          	$data['validation'] = $this->validator; 
 
-         	return view('dashboard/index',$data); 
+         	return view('jaugeage',$data); 
      	}else{ // Valid
 
          	if($file = $this->request->getFile('file')) {

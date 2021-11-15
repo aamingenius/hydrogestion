@@ -11,6 +11,7 @@ class SigninController extends Controller
     {
         helper(['form']);
         echo view('signin');
+        echo '<pre>' . var_export($itemArray, true) . '</pre>';
     } 
   
     public function loginAuth()
@@ -36,7 +37,8 @@ class SigninController extends Controller
                 ];
 
                 $session->set($ses_data);
-                return redirect()->to('/jaugeage');
+                   
+                 return redirect()->to('/jaugeage');
             
             }else{
                 $session->setFlashdata('msg', 'informations incorrect.');
