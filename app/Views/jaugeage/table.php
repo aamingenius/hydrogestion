@@ -18,13 +18,13 @@
                       <table id="example1" class="table table-bordered table-striped">
                         <thead>
                         <tr>
-                          <th>CUVE</th>
                           <th>DATE/HEURE</th>
+                          <th>SITE</th>
                           <th>PRODUIT</th>
                           <th>DEBUT COMPTEUR </th>
                           <th>SORTI</th>
                           <th>ENTRE</th>
-                          <th>ETAT ACTUEL COMPTEUR </th>
+                          <th>FIN COMPTEUR </th>
                          </tr>
                         </thead>
                         <tbody>
@@ -33,8 +33,8 @@
               foreach($jaugeage as $jaugeage){
                 ?>
                 <tr>
-                  <td><?= $jaugeage['cuve'] ?></td>
                   <td><?= $jaugeage['date'] ?></td>
+                  <td><?= $jaugeage['cuve'] ?></td>
                   <td><?= $jaugeage['produit'] ?></td>
                   <td><?= $jaugeage['debut_compteur'].' L' ?></td>
                   <td><?= $jaugeage['sorti'].' L' ?></td>
@@ -54,13 +54,13 @@
                         </tbody>
                         <tfoot>
                         <tr>
-                          <th>CUVE</th>
                           <th>DATE/HEURE</th>
+                          <th>SITE</th>
                           <th>PRODUIT</th>
                           <th>DEBUT COMPTEUR </th>
                           <th>SORTI</th>
                           <th>ENTRE</th>
-                          <th>ETAT ACTUEL COMPTEUR </th>
+                          <th>FIN COMPTEUR </th>
                           </tr>
                         </tfoot>
                       </table>

@@ -6,18 +6,20 @@ class Dashboard extends BaseController
 {
     public function index()
     {
-
+    	 
     	## Fetch all records
       	$users = new Users();
       	$data['users'] = $users->findAll();
+         $page = ['page_title' => 'Dashboard',
+      			'item' => 'dashboard'
+      			];
 
+        echo view('templates/header',$page);
 
-        echo view('templates/header');
-
-            echo view('dashboard/item',$data);
-             echo view('dashboard/table',$data);
-            echo view('dashboard/graphe',$data);
-            echo view('dashboard/dashboard',$data);
+            echo view('templates/item',$data, );
+             echo view('dashboard/table',$data, );
+            echo view('dashboard/graphe',$data, );
+            echo view('dashboard/dashboard',$data, );
         echo view('templates/footer');
     }
 

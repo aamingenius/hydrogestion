@@ -9,14 +9,14 @@ class Jaugeages extends BaseController{
 		## Fetch all records
       	$jaugeage = new JaugeageModel();
       	$data['jaugeage'] = $jaugeage->findAll();
+      	$page = ['page_title' => 'Jaugeage Globale',
+      			'item' => 'globale'
+      			];
+      	 
 
-      	//return view('jaugeage/index',$data);
-
-
-        echo view('templates/header');
-
-            echo view('dashboard/item',$data);
-             echo view('jaugeage/table',$data);
+        echo view('templates/header',$page);
+            echo view('templates/item',$data);
+            echo view('jaugeage/table',$data);
             echo view('dashboard/graphe',$data);
             echo view('dashboard/dashboard',$data);
             
@@ -65,8 +65,8 @@ class Jaugeages extends BaseController{
 		                     $importData_arr[$i] = $filedata[0];
                           
                   		   $item = explode(';',$importData_arr[$i]);
-                         $itemArray[$i]['cuve'] = $item[0];
-                         $itemArray[$i]['date'] = $item[1];
+                         $itemArray[$i]['date'] = $item[0];
+                         $itemArray[$i]['cuve'] = $item[1];
                          $itemArray[$i]['produit'] = $item[2];
                          $itemArray[$i]['debut_compteur'] = $item[3];
                          $itemArray[$i]['sorti'] = $item[4];

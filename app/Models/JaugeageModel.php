@@ -9,7 +9,7 @@ class JaugeageModel extends Model
     protected $primaryKey = 'id';
 
     protected $returnType = 'array';
-protected $allowedFields = ['cuve', 'date','produit','debut_compteur','sorti','entre','fin_compteur','code'];
+protected $allowedFields = [ 'date','cuve','produit','debut_compteur','sorti','entre','fin_compteur','code'];
     protected $useTimestamps = false;
 
     protected $validationRules = [];
