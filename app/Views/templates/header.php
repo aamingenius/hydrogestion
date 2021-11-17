@@ -240,37 +240,37 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?=site_url('jaugeage')?>" class="nav-link active">
+                <a href="<?=site_url('jaugeage')?>" class="nav-link <?php if($item=='global') echo "active"; ?>">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Etat Global</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="<?=site_url('moroni')?>" class="nav-link <?php if($item=='moroni') echo "active"; ?>">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Moroni</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="<?=site_url('anjouan')?>" class="nav-link <?php if($item=='anjouan') echo "active"; ?>">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Anjouan</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="<?=site_url('moheli')?>" class="nav-link <?php if($item=='moheli') echo "active"; ?>">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Moheli</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="<?=site_url('aeroport')?>" class="nav-link <?php if($item=='aeroport') echo "active"; ?>">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Aeroport</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="#" class="nav-link <?php if($item=='hydrogaz') echo "active"; ?>">
                   <i class="far fa-circle nav-icon"></i>
                   <p>HydroGaz</p>
                 </a>

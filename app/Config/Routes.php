@@ -36,6 +36,10 @@ $routes->setAutoRoute(true);
 //$routes->get('/student', 'Student::index');
 //...
 $routes->get('/jaugeage', 'Jaugeages::index');
+$routes->get('/moroni', 'Moroni::index');
+$routes->get('/anjouan', 'Anjouan::index');
+$routes->get('/moheli', 'Moheli::index');
+$routes->get('/aeroport', 'Aeroport::index');
 $routes->post('jaugeages/importFile', 'Jaugeages::importFile');
 
 

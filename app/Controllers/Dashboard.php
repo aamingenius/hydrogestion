@@ -18,7 +18,7 @@ class Dashboard extends BaseController
 
             echo view('templates/item',$data, );
              echo view('dashboard/table',$data, );
-            echo view('dashboard/graphe',$data, );
+            //echo view('dashboard/graphe',$data, );
             echo view('dashboard/dashboard',$data, );
         echo view('templates/footer');
     }

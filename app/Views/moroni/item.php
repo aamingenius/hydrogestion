@@ -1,4 +1,4 @@
- 
+<!-- /.content-header -->
 
     <!-- Main content -->
     <section class="content">
@@ -9,8 +9,7 @@
           <div class="col-lg-3 col-6">
             <!-- small box -->
             <div class="small-box bg-info">
-              <div class="inner">
-                <?php 
+              <div class="inner"><?php 
                 if(isset($jaugeage) && count($jaugeage) > 0){
                   $compteur_essence=0;
                   $compteur_gasoil=0;
@@ -19,16 +18,16 @@
                   $compteur_gaz=0;
               foreach($jaugeage as $jaugeage){
     
-              if($jaugeage['produit'] == "ESSENCE" && $jaugeage['date']==date('d/m/Y', strtotime(' -1 day'))){
+              if(stripos($jaugeage['cuve'], "MORONI") !== false && $jaugeage['produit'] == "ESSENCE" && $jaugeage['date']==date('d/m/Y', strtotime(' -1 day'))){
                               $compteur_essence=$compteur_essence+$jaugeage['fin_compteur'];
                    }
-              if($jaugeage['produit'] == "GASOIL" && $jaugeage['date']==date('d/m/Y', strtotime(' -1 day'))){
+              if(stripos($jaugeage['cuve'], "MORONI") !== false && $jaugeage['produit'] == "GASOIL" && $jaugeage['date']==date('d/m/Y', strtotime(' -1 day'))){
                               $compteur_gasoil=$compteur_gasoil+$jaugeage['fin_compteur'];
                    }
-              if($jaugeage['produit'] == "PETROLE" && $jaugeage['date']==date('d/m/Y', strtotime(' -1 day'))){
+              if(stripos($jaugeage['cuve'], "MORONI") !== false && $jaugeage['produit'] == "PETROLE" && $jaugeage['date']==date('d/m/Y', strtotime(' -1 day'))){
                               $compteur_petrole=$compteur_petrole+$jaugeage['fin_compteur'];
                    }
-              if($jaugeage['produit'] == "JET A1" && $jaugeage['date']==date('d/m/Y', strtotime(' -1 day'))){
+              if(stripos($jaugeage['cuve'], "MORONI") !== false && $jaugeage['produit'] == "JET A1" && $jaugeage['date']==date('d/m/Y', strtotime(' -1 day'))){
                               $compteur_jeta1=$compteur_jeta1+$jaugeage['fin_compteur'];
                    }
               // if($jaugeage['produit'] == "GAZ" && $jaugeage['date']==date('d/m/Y', strtotime(' -1 day'))){
@@ -50,7 +49,7 @@
               <div class="icon">
                 <i class="ion ion-waterdrop"> </i> 
               </div>
-              <!-- <a href="#" class="small-box-footer">  <i class="fas fa-arrow-circle-right"></i></a> -->
+              <a href="#" class="small-box-footer"><!-- Plus info <i class="fas fa-arrow-circle-right"></i> --></a>
             </div>
           </div>
           <!-- ./col -->
@@ -65,7 +64,7 @@
               <div class="icon">
                 <i class="ion ion-waterdrop"></i>
               </div>
-              <!-- <a href="#" class="small-box-footer">  <i class="fas fa-arrow-circle-right"></i></a> -->
+              <a href="#" class="small-box-footer"><!-- Plus info <i class="fas fa-arrow-circle-right"></i> --></a>
             </div>
           </div>
           <!-- ./col -->
@@ -80,7 +79,7 @@
               <div class="icon">
                 <i class="ion ion-waterdrop"></i>
               </div>
-              <!-- <a href="#" class="small-box-footer">  <i class="fas fa-arrow-circle-right"></i></a> -->
+              <a href="#" class="small-box-footer"><!-- Plus info <i class="fas fa-arrow-circle-right"></i> --></a>
             </div>
           </div>
           <!-- ./col -->
@@ -95,7 +94,7 @@
               <div class="icon">
                 <i class="ion ion-plane"></i>
               </div>
-              <!-- <a href="#" class="small-box-footer">  <i class="fas fa-arrow-circle-right"></i></a> -->
+              <a href="#" class="small-box-footer"><!-- Plus info <i class="fas fa-arrow-circle-right"></i> --></a>
             </div>
           </div>
           <!-- ./col -->
@@ -114,4 +113,4 @@
             </div>
           </div> -->
         </div>
-        <!-- /.row
+        <!-- /.row -->

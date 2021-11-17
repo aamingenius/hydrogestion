@@ -31,6 +31,7 @@
                           <?php 
             if(isset($jaugeage) && count($jaugeage) > 0){
               foreach($jaugeage as $jaugeage){
+                 
                 ?>
                 <tr>
                   <td><?= $jaugeage['date'] ?></td>
@@ -41,7 +42,7 @@
                   <td><?= $jaugeage['entre'].' L' ?></td>
                   <td><?= $jaugeage['fin_compteur'].' L' ?></td>
                 </tr>  
-             <?php
+             <?php  
                     }
                   }else{
                     ?>

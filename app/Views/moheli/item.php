@@ -9,8 +9,7 @@
           <div class="col-lg-3 col-6">
             <!-- small box -->
             <div class="small-box bg-info">
-              <div class="inner">
-                <?php 
+              <div class="inner"><?php 
                 if(isset($jaugeage) && count($jaugeage) > 0){
                   $compteur_essence=0;
                   $compteur_gasoil=0;
@@ -50,7 +49,7 @@
               <div class="icon">
                 <i class="ion ion-waterdrop"> </i> 
               </div>
-              <!-- <a href="#" class="small-box-footer">  <i class="fas fa-arrow-circle-right"></i></a> -->
+              <a href="#" class="small-box-footer">Plus info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -65,7 +64,7 @@
               <div class="icon">
                 <i class="ion ion-waterdrop"></i>
               </div>
-              <!-- <a href="#" class="small-box-footer">  <i class="fas fa-arrow-circle-right"></i></a> -->
+              <a href="#" class="small-box-footer">Plus info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -80,7 +79,7 @@
               <div class="icon">
                 <i class="ion ion-waterdrop"></i>
               </div>
-              <!-- <a href="#" class="small-box-footer">  <i class="fas fa-arrow-circle-right"></i></a> -->
+              <a href="#" class="small-box-footer">Plus info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -95,7 +94,7 @@
               <div class="icon">
                 <i class="ion ion-plane"></i>
               </div>
-              <!-- <a href="#" class="small-box-footer">  <i class="fas fa-arrow-circle-right"></i></a> -->
+              <a href="#" class="small-box-footer">Plus info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->

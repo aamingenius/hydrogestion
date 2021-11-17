@@ -8,16 +8,16 @@ class Jaugeages extends BaseController{
 	public function index(){
 		## Fetch all records
       	$jaugeage = new JaugeageModel();
-      	$data['jaugeage'] = $jaugeage->findAll();
-      	$page = ['page_title' => 'Jaugeage Globale',
+      	$data['jaugeage'] = $jaugeage->orderBy('date', 'ASC')->findAll();
+      	$page = ['page_title' => 'Etat Globale',
       			'item' => 'globale'
       			];
       	 
    // echo '<pre>' . var_export($session->name, true) . '</pre>';
         echo view('templates/header',$page);
             echo view('templates/item',$data);
-            echo view('jaugeage/table',$data);
-            echo view('dashboard/graphe',$data);
+            echo view('jaugeage/table',$data,$page);
+            //echo view('dashboard/graphe',$data);
             echo view('dashboard/dashboard',$data);
             
         echo view('templates/footer');
